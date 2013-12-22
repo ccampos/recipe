@@ -1,0 +1,1317 @@
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="https://www.facebook.com/2008/fbml"
+      lang="en" xml:lang="en">
+<head>
+  <script type="text/javascript">
+(function (site_root, location, document, forceCookieUrl) {
+/* lsg-mobile-detect.js Version 2.0 */
+    var version = 2.0,
+    	pref_exists = /TI_PREFS=/,
+        pref_mob = /TI_PREFS=phone/,
+        pref_def = /TI_PREFS=default/,
+        no_mob   = /nomobile=1/,
+        omniture_cookie = 'orig_ref',
+        mob_path = '/m',
+        cookie = document.cookie,
+        redirect = function() {
+        /* Build mobile version of the url */
+            var mob_url  = location.href.replace(site_root, function(match, idx, url){
+                // Check if redirect to site_root, and if so, append a trailing
+                // slash to avoid a server-side redirect (301) on bare url.
+                  var is_root = match.length + idx === url.length;
+                  return match + mob_path + (is_root ? '/' : '');
+                });
+
+        /* Set Omniture cookie to capture referrer */
+            document.cookie = omniture_cookie + '=' + document.referrer + '; path=/';
+
+        /* Execute redirect */
+            location.href = mob_url;
+        };
+
+	/* Force the device atlas cookie if we're on a reverse-proxy URL. */
+	if (forceCookieUrl.length > 0 && !pref_exists.test(cookie)) {
+		if (no_mob.test(location.search)) {
+	        document.cookie = pref_def.source + '; path=/; domain=' + location.hostname.match(/^.*\.(.*\.com)$/)[1];
+	        return;
+		}
+		var mrForcedRequest = null;
+	    if (window.XMLHttpRequest){
+	        mrForcedRequest = new XMLHttpRequest();
+	    } else if (window.ActiveXObject) { // IE
+	        try {
+	          mrForcedRequest = new ActiveXObject("Msxml2.XMLHTTP");
+	        }
+	        catch (e) {
+	          try {
+	            mrForcedRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	          }
+	          catch (e) {}
+	        }
+	    }
+	    if (mrForcedRequest == null) {
+	    	return;
+	    }
+	    mrForcedRequest.open("GET",forceCookieUrl,false);
+	    mrForcedRequest.send();
+	    cookie = document.cookie;
+	}
+
+	/* Redirect to mobile equivalent URL if pref_mobile cookie exists */
+    if (pref_mob.test(cookie)) {
+        redirect();
+    }
+
+}(/myrecipes\.com/, location, document, 'http://www.myrecipes.com/static/mobile/force-device-atlas-cookie.html'));
+</script>  
+    <meta name="ka_env" content="ti_savvis_ka_prod" />
+    <meta name="ka_page" content="recipe/show" /><meta name="ka_model" content="sweet-glazed-chicken-thighs-50400000124264" /><meta name="ka_model_name" content="Sweet Glazed Chicken Thighs" /><meta name="ka_model_type" content="recipe" />
+    <script type="text/javascript">
+      window.omnitureHookFunction = function() {
+        if(typeof getCookie == 'function') { 
+          var recipeUpdated = getCookie('KACreatingRecipe') || getCookie('KAUpdatingRecipe');
+          if (recipeUpdated) {
+            var recipeIsPublic = true;
+            if (recipeIsPublic) {
+              s_time.eVar13 = 'public';
+            } else {
+              s_time.eVar13 = 'private';
+            }
+          }
+        }
+      }
+      var omni_newstout_id = 'MR Chicken';     
+    </script>
+    <meta name="recipe_average_rating" content="4.2727272727272725" />
+    <meta name="recipe_name" content="Sweet Glazed Chicken Thighs" />
+    <meta name="edit_created" content="true" />
+    <meta property="og:title" content="Sweet Glazed Chicken Thighs | MyRecipes.com" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="MyRecipes.com"/>
+    <meta property="og:image" content="http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-l.jpg"/>
+    <meta property="og:description" content="This simple chicken dish becomes a whole lot more savory when stuck in a slow cooker. The sweet juice mixture gives the chicken its undeniably delicious flavor. Serve over hot cooked rice."/>
+    <meta property="og:url" content="http://www.myrecipes.com/recipe/sweet-glazed-chicken-thighs-50400000124264/"/>
+    <meta property="fb:app_id" content="182096525173207"/>
+    <meta property="jumptime:headline" content="Sweet Glazed Chicken Thighs" />
+<meta property="jumptime:url" content="http://www.myrecipes.com/recipe/sweet-glazed-chicken-thighs-50400000124264/" />
+    <meta property="jumptime:image" content="true" />
+    <meta property="jumptime:imageurl" content="http://img4-1.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-m.jpg" />
+
+    <meta name="bitly-url" content="http://bit.ly/TjarIh" />
+
+
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<meta name="render-time" content="2013-12-22 06:58:24 -0500" />
+<meta name="content-id" content="" />
+<title>Sweet Glazed Chicken Thighs Recipe | MyRecipes.com</title>
+<meta name="description" content="This simple chicken dish becomes a whole lot more savory when stuck in a slow cooker. The sweet juice mixture gives the chicken its undeniably delicious flavor. Serve over hot cooked rice." />
+<meta name="keywords" content="Low Calorie,Low Fat,Low Saturated Fat,Low Sodium,Gluten-Free, Main Dishes, Poultry, Slow Cook" />
+<meta name="ka_recipeName" content="Sweet Glazed Chicken Thighs" />
+<meta name="ka_menuName" content="" />
+<meta name="ka_pageName" content="displayRecipe:Sweet Glazed Chicken Thighs" />
+<meta name="ka_ad_recipeID" content="50400000124264" />
+<meta name="ka_ad_menuID" content="" />
+<meta name="ka_ad_pub" content="Oxmoor House" />
+<meta name="ka_ad_cookbook" content="" />
+<meta name="ka_ad_course" content="Main Dishes" />
+<meta name="ka_ad_cuisine" content="" />
+<meta name="ka_ad_mainIng" content="Poultry" />
+<meta name="ka_excludeIng" content="Dairy,Eggs,Nuts,Fish,Shellfish,Alcohol" />
+<meta name="ka_ad_diet" content="Low Calorie,Low Fat,Low Saturated Fat,Low Sodium,Gluten-Free" />
+<meta name="ka_ad_prep" content="Slow Cook" />
+<meta name="ka_ad_convenience" content="" />
+<meta name="ka_ad_season" content="" />
+<meta name="ka_ad_franchise" content="" />
+<meta name="ka_ad_cont" content="" />
+<meta name="ka_cooktime" content="" />
+<meta name="ka_costperserving" content="" />
+<meta name="ka_recipeRating" content="4" />
+<meta name="ka_ad_specialIng" content="" />
+<meta name="ka_ad_keyValuePairs" content="" />
+<link rel="canonical" href="http://www.myrecipes.com/recipe/sweet-glazed-chicken-thighs-50400000124264/" />
+<link rel="shortcut icon" href="http://img4.myrecipes.com/static/i/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="http://img4.myrecipes.com/static/i/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://img4.myrecipes.com/static/i/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://img4.myrecipes.com/static/i/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://img4.myrecipes.com/static/i/apple-touch-icon-144x144.png" />
+<link rel="stylesheet" type="text/css" href="http://img4.myrecipes.com/static/c/global.css?buildlife=62373" media="all" />
+  <link href="http://img4.myrecipes.com/static/c/recipe.css?buildlife=62373" media="all" rel="stylesheet" type="text/css" /><link href="http://img4.myrecipes.com/static/c/menus.css?buildlife=62373" media="all" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="http://img4.myrecipes.com/static/c/ie.css?buildlife=62373" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="http://img4.myrecipes.com/static/c/lt-ie7.css?buildlife=62373" /><![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!-- SSi Include  /static/inc/third-party/optimizely-js.html -->
+<script type="text/javascript" src="//cdn.optimizely.com/js/61589417.js"></script>
+<!-- SSi Include  /static/inc/third-party/gigya-js.html -->
+<script type="text/javascript" src="http://cdn.gigya.com/JS/socialize.js?apikey=2_HpHALCpCbkIUbgzW69kzWgT7KYymlgiiYSUzVWx17XtD3IRYvCchk6WUOXwqDVl8"></script>
+<!-- SSi Include  /static/inc/third-party/yieldbot-js.html -->
+<script type="text/javascript" src="http://cdn.yb0t.com/js/yieldbot.intent.js"></script>
+<script type="text/javascript">
+	yieldbot.pub('2cdd');
+	yieldbot.defineSlot('728x90-position-1');
+	yieldbot.defineSlot('300x250-position-1');
+	yieldbot.go();
+</script>
+<script type="text/javascript" src="http://tiads.myrecipes.com/ads/tgx.js"></script>
+<script type="text/javascript">var mrDinnerTonightRecipeIds = ['10000001536670','50400000119672','50400000120271','10000000549780','10000001108323','10000001891951','10000002012771','10000000522140','10000001924699','50400000120278','10000001932632','10000001940998','10000001036172','10000001940988','10000000231619','10000000431064','10000001924701','10000001011292','10000000549832','10000001835287','10000001120368','10000001108237','10000001545737','10000002012815','10000001031660','10000000592360','10000001673050','10000001545715','10000001108318','10000000689956','10000001536672'];</script>
+
+<script type="text/javascript" src="http://img4.myrecipes.com/static/j/global.js?buildlife=62373"></script>
+<script type="text/javascript" src="http://img4.myrecipes.com/static/j/ka.js?buildlife=62373"></script>
+<script type="text/javascript" src="http://imgka.myrecipes.com/javascripts/ka.js?buildlife=62373"></script>
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.myrecipes.com/m/recipe/sweet-glazed-chicken-thighs-50400000124264/" />
+
+
+
+    <script src="http://myrecipes.groceryserver.com/groceryserver/api/script_v02.jsp?6bc8d72cbcc2edb79f292339dc685142" type="text/javascript"></script>
+  <script src="http://jsrails.timeinc.net/j/com.ticommunity.comm.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  		<div id="omniture" style="display:none">
+			<script type="text/javascript">//<![CDATA[
+				var s_account="timemyrecipesnew";
+			//]]></script>
+			<script type="text/javascript" src="http://img4.myrecipes.com/static/j/ext/omniture/myrecipes-consolidated.js?buildlife=62373"></script>
+			<script type="text/javascript" src="http://img4.myrecipes.com/static/j/ext/omniture/ka-omniture.js?buildlife=62373"></script>
+			<noscript>
+				<img src="http://timeinc.122.2o7.net/b/ss/timemyrecipesnew/1/H.21--NS/0?gn=myrecipes%7Cno%20javascript&amp;ch=myrecipes&amp;c16=general&amp;c17=D%3Dreferer" alt="log" width="1" height="1" />
+			</noscript>
+		</div>
+
+  <script type="text/javascript">
+   				$(document).ready(function(){
+   					if (!(false || this_c_type === 'lu-homepage')) {
+   						var sidebar_config = {
+   							badges: {
+   								facebook_link: hasFacebookLink(),facebook_like: hasFacebookLike(),google_plusone: hasGooglePlusOne(),pinterest: hasPinterest(),twitter:
+   hasTwitter(),email_badge: hasEmailBadge(),print_badge: hasPrintBadge(),mobile_badge: hasMobileBadge()
+   							}
+   						};
+   						$('#social-sidebar').mr_core('social_sidebar_init', sidebar_config);
+   					}
+   				});
+   			
+</script>
+  <!-- SSi Include  /static/inc/toplinks.html -->
+<div class="topLinks clr">
+	<a class="skipTo" href="#mainContent">Skip to Main Content</a>
+	<div class="spcLinks">
+            		
+            <ul class="logoBar">
+               <li class="ay"><a href="http://www.allyou.com/?xid=logobar-mr" title="All You" rel="nofollow" target="_blank">All You</a></li>
+               <li class="cx"><a href="http://www.coastalliving.com/?xid=logobar-mr" title="Coastal Living" rel="nofollow" target="_blank">Coastal Living</a></li>
+               <li class="cl"><a href="http://www.cookinglight.com/?xid=logobar-mr" title="Cooking Light" rel="nofollow" target="_blank">Cooking Light</a></li>
+               <li class="fw"><a href="http://www.foodandwine.com/?xid=logobar-mr" title="Food and Wine" rel="nofollow" target="_blank">Food and Wine</a></li>
+               <li class="hl"><a href="http://www.health.com/health/?xid=logobar-mr" title="Health" rel="nofollow" target="_blank">Health</a></li>
+               <li class="mr tab">My Recipes</li>
+               <li class="rs"><a href="http://www.realsimple.com/?xid=logobar-mr" title="Real Simple" rel="nofollow" target="_blank">Real Simple</a></li>
+               <li class="sl"><a href="http://www.southernliving.com/?xid=logobar-mr" title="Southern Living" rel="nofollow" target="_blank">Southern Living</a></li>
+               <li class="st"><a href="http://www.sunset.com/?xid=logobar-mr" title="Sunset" rel="nofollow" target="_blank">Sunset</a></li>
+            </ul>
+            	
+    </div>
+
+</div><!--  /div.topLinks -->
+<div class="wrap">
+	<!-- SSi Include  /static/inc/logo.html -->
+<div class="logo" itemscope itemtype="http://schema.org/Organization">
+	<div class="wrap2">
+		<a href="http://www.myrecipes.com/" itemprop="url"><img src="http://img4.myrecipes.com/static/i/logo_myrecipes_header.gif" alt="My Recipes" itemprop="logo" /></a>
+	</div><!-- /div.wrap2 -->
+</div><!-- /div.logo -->
+	<!-- SSi Include /static/inc/searchbar.html -->
+<div class="searchbar">
+	<div class="wrap2">
+		<form class="search" method="get" action="http://search.myrecipes.com/search.html" onsubmit="omniSearch(this.Ntt.value);" enctype="application/x-www-form-urlencoded">
+			<div>
+				<label for="searchbox">Search MyRecipes.com</label>
+				<input type="text" id="searchbox" maxlength="100" value="" name="Ntt" /><input type="image" alt="Search" src="http://img4.myrecipes.com/static/i/searchglass.gif"  />
+			</div>
+			<ul id="search-nav">
+			    <li class="last link">
+                       <a class='search-link' href="http://search.myrecipes.com/nutrition-search.html?pid=nutrition-search">Nutrition Search</a>
+                   </li>
+			    <li class="link">
+			         <a class='search-link' href="http://www.myrecipes.com/ingredient-chef/?pid=ingredient-search">Ingredient Search</a>
+			    </li>
+			</ul>
+		</form><!-- /form.search -->
+		<script type="text/javascript">initSearchbox();</script>
+		
+		<!-- /div.sbLinks -->
+		<div class="signinbar"></div>
+    	<!-- /div.signinbar -->			
+	</div><!-- /div.wrap2 -->
+</div><!-- /div.searchbar -->
+	<div class="nav x4-nav">
+
+	<div class="wrap2">
+
+		<ul>
+
+			<li class="main"><a href="http://www.myrecipes.com/"><span><img src="http://img4.myrecipes.com/static/i/nav-home.png" /></span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/contests-and-sweepstakes/recipe-contests-sweepstakes-00420000000466/">Sweepstakes</a></li>
+					<li><a href="http://search.myrecipes.com/search.html?type=ct:Videos;&amp;Ntk=photo_sort&amp;Ns=p_has_photo%7C1">Video</a></li>
+					<li><a href="http://www.myrecipes.com/community/">Community</a></li>
+					<li><a href="http://coupons.myrecipes.com/ccr/default.aspx?go=15010bn3310">Grocery Coupons</a></li>
+					<li><a href="http://youvegottotastethis.myrecipes.com/">Blog</a></li>
+				</ul>
+			</li>
+			<li class="recipe-finder"><a href="http://www.myrecipes.com/recipe-finder/"><span>Recipes</span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/recipe-finder/">Browse Recipes</a></li>
+					<li><a href="http://search.myrecipes.com/advanced-search.html">Advanced Recipe Search</a></li>
+					<li><a href="http://search.myrecipes.com/nutrition-search.html">Nutrition Recipe Search</a></li>
+					<li><a href="http://www.myrecipes.com/recipe-finder/sponsor-recipes/">Sponsor Recipes</a></li>
+					<li><a href="http://search.myrecipes.com/search.html?type=ct:Recipes;rt:Community;">Member Recipes</a></li>
+				</ul>
+			</li>
+			<li class="my-recipe-file"><a href="http://www.myrecipes.com/r/my_recipe_file/"><span>My Recipe File</span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/recipe/new/">Add a Recipe</a></li>
+					<li><a href="http://www.myrecipes.com/r/my_recipe_file/saved_recipes/">Saved Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/r/my_recipe_file/shopping_lists/">Shopping Lists</a></li>
+					<li><a href="http://www.myrecipes.com/r/my_recipe_file/saved_menus/">Saved Menus</a></li>
+				</ul>
+			</li>
+
+			<li class="quick-and-easy"><a href="http://www.myrecipes.com/quick-and-easy/"><span>Quick &#38; Easy</span></a>
+
+				<ul>
+					<li><a href="http://www.myrecipes.com/no-cook-recipes/">No Cook Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/chicken-recipes/">Chicken Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/make-ahead-recipes/">Make Ahead Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/slow-cooker-recipes/">Slow-Cooker Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/quick-and-easy/5-ingredients-or-less/five-and-dine-00420000006245/">5 Ingredient Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/quick-and-easy/15-minute-recipes/">15-Minute Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/quick-and-easy/dinner-tonight/">Dinner Tonight</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="menus"><a href="http://www.myrecipes.com/menus/"><span>Menus</span></a>
+
+				<ul>
+					<li><a href="http://www.myrecipes.com/menus/menu-finder/">Menu Finder</a></li>
+					<li><a href="http://www.myrecipes.com/holidays-and-occasions/">Holidays</a></li>
+					<li><a href="http://www.myrecipes.com/appetizer-recipes/">Appetizers</a></li>
+					<li><a href="http://www.myrecipes.com/cocktail-recipes/">Cocktails</a></li>
+					<li><a href="http://www.myrecipes.com/dessert-recipes/">Desserts</a></li>
+					<li><a href="http://www.myrecipes.com/wedding-and-shower-recipes/">Weddings &amp; Showers</a></li>
+					<li><a href="http://www.myrecipes.com/menus/weeknight-meal-planners-00420000011372/">Weeknight Meal Plans</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="healthy-diet"><a href="http://www.myrecipes.com/healthy-diet/"><span>Healthy</span></a>
+				<ul>
+					<li><a href="http://www.myrecipes.com/diabetic-recipes/">Diabetic Recipes</a></li>
+					<li><a href="http://www.myrecipes.com/gluten-free-recipes/">Gluten Free</a></li>
+					<li><a href="http://www.myrecipes.com/heart-healthy-recipes/">Heart Healthy</a></li>
+					<li><a href="http://www.myrecipes.com/vegetarian-recipes/">Vegetarian Recipes</a></li>
+
+					<li><a href="http://www.myrecipes.com/healthy-diet/calorie-counts/">Calorie Counts</a></li>
+
+				</ul>
+
+			</li>
+
+			<li class="how-to"><a href="http://www.myrecipes.com/how-to/video/cooking-videos-00420000005876/"><span>How-To Video</span></a></li>
+
+			<li class="kids"><a href="http://www.myrecipes.com/kids/"><span>Kids</span></a>
+
+				<ul>
+					<li><a href="http://www.myrecipes.com/t/kid-friendly/snacks/">Snacks</a></li>
+					<li><a href="http://www.myrecipes.com/t/kid-friendly/lunches-and-sandwiches/">Lunches</a></li>
+					<li><a href="http://www.myrecipes.com/t/kid-friendly/dinners/">Dinners</a></li>
+					<li><a href="http://www.myrecipes.com/kids/healthy-kids/">Healthy Kids</a></li>
+					<li><a href="http://www.myrecipes.com/kids/play-with-your-food/">Video</a></li>
+
+				</ul>
+
+			</li>
+      <li class="rotating-channel"><a href="http://www.myrecipes.com/holidays/cookies/"><span>Cookies</span></a></li>
+			<li class="holidays rotating-channel"><a href="http://www.myrecipes.com/holidays/"><span>Holidays</span></a>
+        <ul>
+      		<li><a href="http://www.myrecipes.com/holidays/menus-parties/">Holiday Menus &amp; Parties</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/food-gifts/">Food Gifts</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/how-to/">Holiday How-To</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/appetizers/">Appetizers</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/side-dishes/">Sides</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/sweet-potato-headquarters-00420000014054/">Sweet Potato Headquarters</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/cookies/">Cookies</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/desserts/">Desserts</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/videos/holiday-how-to-videos-00420000007651/">Videos</a></li>
+      		<li><a href="http://www.myrecipes.com/holidays/drinks/">Drinks</a></li>
+      	</ul>
+      </li>
+    </ul>
+	</div>
+
+</div>
+
+	<div class="content">
+		<div class="wrap2">
+			<a name="mainContent" id="mainContent" tabindex="-1"></a>
+
+
+  <div itemscope itemtype="http://data-vocabulary.org/Recipe">
+    
+
+     <div class="colAB">
+        <div class="pageHead">
+          <div class="breadcrumb">
+  <a href="http://www.myrecipes.com/recipe-finder/">Recipes</a> &gt; Sweet Glazed Chicken Thighs
+</div>
+  
+          <h1 class="x4-headline" itemprop="name">Sweet Glazed Chicken Thighs</h1>
+        </div>
+            <div class="recipeCont clr">
+             <div class="rHero clr">
+                  <div class="featPhotoA">
+
+  <div class="photo">
+         <a class="enlarge" rel="group1" title="(Oxmoor House)">
+          <img alt="Sweet Glazed Chicken Thighs Recipe" height="300" itemprop="photo" src="http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-l.jpg" title="Sweet Glazed Chicken Thighs Recipe" width="300" />
+        </a>
+              <a id="uploadPhotosLink" class="photoCount alpha60 cboxElement loading" href="/r/overlays/recipe_photo_upload.html?recipeID=sweet-glazed-chicken-thighs-50400000124264"><strong>Upload a recipe photo</strong></a>
+  
+  </div>
+
+  <div class="inner">
+     <div class="credit">
+          Oxmoor House
+    </div>
+  </div>
+
+</div>
+<!-- /div.featPhotoA -->
+  
+                  <div class="rHeroB">
+
+                     <div class="toolbar">
+  <ul class="shareIcons">
+    <li class="pinIt">
+      <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.myrecipes.com%2Frecipe%2Fsweet-glazed-chicken-thighs-50400000124264%2F&amp;media=http%3A%2F%2Fimg4-3.myrecipes.timeinc.net%2Fi%2Frecipes%2Foh%2F12%2Foh-sweet-glazed-chicken-thighs-l.jpg&amp;description=Sweet+Glazed+Chicken+Thighs+%7C+MyRecipes.com"
+         target="_blank"
+         onclick="omniCommunityTracker('pin-it-ctr');"></a>
+    </li>
+    <li class="googlePlus">
+      <script type="text/javascript">
+        window.google_plus_ctr_onclick = function() {
+          omniCommunityTracker('google-plus-ctr');
+        };
+      </script>
+      <g:plusone xmlns:g="http://base.google.com/ns/1.0" annotation="none" size="standard"
+                 callback="google_plus_ctr_onclick"></g:plusone>
+    </li>
+    <li class="tweet"><a target="_blank" onclick="omniCommunityTracker('share-Twitter-ctr');"
+        href="https://twitter.com/share?url=http%3A%2F%2Fbit.ly%2FTjarIh&text=Sweet+Glazed+Chicken+Thighs+Recipe+via+%40My_Recipes"></a></li>
+    <li class="fbLike">
+      <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.myrecipes.com%2Frecipe%2Fsweet-glazed-chicken-thighs-50400000124264%2F&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"
+              scrolling="no"
+              frameborder="0"
+              style="border:none; overflow:hidden; width:90px; height:21px;"
+              allowTransparency="true"></iframe>
+    </li>
+  </ul>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+</div>
+
+
+
+
+
+                      <h2 class="dek" itemprop="summary"><p>This simple chicken dish becomes a whole lot more savory when stuck in a slow cooker. The sweet juice mixture gives the chicken its undeniably delicious flavor. Serve over hot cooked rice.</p></h2>
+
+                      <div class="rating1" itemprop="review" itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+    <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+      <span itemprop="average" style="display:none">4.0</span>
+    </span>
+    <span itemprop="reviews" style="display:none">11</span>
+    
+    <div class="rating1star starRating" data-score="4.2727272727272725"></div>
+
+    <p class="rating1desc"></p>
+
+    <div class="rating1rev">
+      <a href="#reviewForm">Rate and Review</a> |
+     <a href="http://www.myrecipes.com/recipe/sweet-glazed-chicken-thighs-50400000124264/ratings/">Read Reviews (<span itemprop="count">7</span>)</a>
+    </div>
+
+</div>
+
+                         <div class="recipe411">
+        <div><strong>Yield:</strong> <span itemprop="yield">6 servings (serving size: 1/2 cup rice, 1 chicken thigh, about 1/3 cup sauce, and 1 1/2 teaspoons green onions)</span></div>
+
+
+  
+   </div>
+
+
+                 </div> <!-- /div.rHeroB -->
+             </div> <!-- /div.rHero clr -->
+             <div class="colA">
+                   <div class="sponsorAd">
+<span>Recipe from</span>
+<a href="http://www.oxmoorhouse.com/"><img alt="Oxmoor House" src="http://img4.myrecipes.com/static/i/from_oxmoorhouse.png" /></a>
+ </div>
+    
+
+   <div class="moreFromPub">
+   <h4>More From 
+      <i>Oxmoor House</i>
+   </h4>
+   <ul>
+      <script type="text/javascript">
+	if (typeof adFactory != 'undefined') {
+		adFactory.getCmAd(142, 70, "article", "text").write();
+	}
+</script>
+      <li>
+         <a href="http://www.myrecipes.com/t/casseroles/vegetable/sweet-potato-casseroles/">Sweet Potato Casserole Recipes</a>
+      </li>
+      <li>
+         <a href="http://www.myrecipes.com/appetizer-recipes/">Appetizer Recipes</a>
+      </li>
+      <li>
+         <a href="http://www.myrecipes.com/slow-cooker-recipes/">Slow Cooker Recipes</a>
+      </li>
+      <li>
+         <a href="http://www.myrecipes.com/casserole-recipes/">Casserole Recipes</a>
+      </li>
+      <li>
+         <a href="http://www.myrecipes.com/cookie-recipes/">Cookie Recipes</a>
+      </li>
+   </ul>
+</div>
+
+
+
+
+
+
+    <div class="left">
+  <div class="nutritionalInfo">
+    <h4>Nutritional Information</h4>
+    
+    <div class="inner">
+     <strong>Amount per serving</strong>
+    <ul itemprop="nutrition" itemscope itemtype="http://data-vocabulary.org/Nutrition">
+      <li>
+        Calories:
+        <span itemprop="calories">
+          339
+        </span>
+      </li>
+      <li>
+        Calories from fat:
+        <span itemprop="caloriesFromFat">
+          0.0%
+        </span>
+      </li>
+      <li>
+        Fat:
+        <span itemprop="fat">
+          7.1g
+        </span>
+      </li>
+      <li>
+        Saturated fat:
+        <span itemprop="saturatedFat">
+          1.7g
+        </span>
+      </li>
+      <li>
+        Monounsaturated fat:
+        <span itemprop="monounsaturatedFat">
+          2.5g
+        </span>
+      </li>
+      <li>
+        Polyunsaturated fat:
+        <span itemprop="polyunsaturatedFat">
+          1.6g
+        </span>
+      </li>
+      <li>
+        Protein:
+        <span itemprop="protein">
+          32.4g
+        </span>
+      </li>
+      <li>
+        Carbohydrate:
+        <span itemprop="carbohydrate">
+          33.7g
+        </span>
+      </li>
+      <li>
+        Fiber:
+        <span itemprop="fiber">
+          0.6g
+        </span>
+      </li>
+      <li>
+        Cholesterol:
+        <span itemprop="cholesterol">
+          125mg
+        </span>
+      </li>
+      <li>
+        Iron:
+        <span itemprop="iron">
+          2.8mg
+        </span>
+      </li>
+      <li>
+        Sodium:
+        <span itemprop="sodium">
+          363mg
+        </span>
+      </li>
+      <li>
+        Calcium:
+        <span itemprop="calcium">
+          35mg
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="link"><a href="http://search.myrecipes.com/nutrition-search.html">Search for Recipes by Nutrition Data</a></div>
+  </div> <!-- end nutritional info -->
+</div>
+  
+             </div> <!-- /div.colA -->
+             <div class="colB">
+              <div class="recipeDetails">
+        <div id="groceryInfo" class="groceryInfo"></div>
+    <br clear="none" />
+    <h3>Ingredients</h3>
+    <div id="enterGroceryInfo" class="enterGroceryInfo"></div>
+    <div class="toolbar clr">
+     <ul class="pt1">
+         <li class="print" onclick="omniCommunityTracker('print');"><a href="http://www.myrecipes.com/recipe/sweet-glazed-chicken-thighs-50400000124264/print/" target="_new">Print</a></li>
+         <li class="email"><span class="st_email_custom"><a>Email</a></span></li>
+            <li class="send_to_mobile">
+                <a href="#" class="sendRecipeToPhone">Send To Mobile</a>
+            </li>
+      </ul>
+      <ul class="pt2">
+         <li><a href="#" class="save1">Save Recipe</a></li>
+         <li><a href="#" class="save2">Add to Menu</a></li>
+         <li><a href="#" class="save3">Add to Shopping List</a></li>
+          <script> recipe_is_included = false; </script>
+            <li class="ecookbook">
+               <a href="#" id="add-recipe-to-eb" class="can_click">Add to eCookBook</a><a class="learn-more">Learn more</a>
+            </li>
+      </ul>
+</div>
+
+    
+    <ul>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">2 pounds</span>
+                <span itemprop="name"> skinless, boneless chicken thighs</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1/2 teaspoon</span>
+                <span itemprop="name"> freshly ground black pepper</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1/4 teaspoon</span>
+                <span itemprop="name"> salt</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1 teaspoon</span>
+                <span itemprop="name"> olive oil</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount"> </span>
+                <span itemprop="name"> Cooking spray</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">1 cup</span>
+                <span itemprop="name"> pineapple juice</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">2 tablespoons</span>
+                <span itemprop="name"> light brown sugar</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">2 tablespoons</span>
+                <span itemprop="name"> lower-sodium soy sauce</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">3 tablespoons</span>
+                <span itemprop="name"> water</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">2 tablespoons</span>
+                <span itemprop="name"> cornstarch</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">3 cups</span>
+                <span itemprop="name"> hot cooked rice</span>
+                <span itemprop="preparation"> </span>
+              </li>
+              <li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+                <span itemprop="amount">3 tablespoons</span>
+                <span itemprop="name"> sliced green onions</span>
+                <span itemprop="preparation"> </span>
+              </li>
+    </ul>
+
+    <h3>Preparation</h3>
+    <ol itemprop="instructions">
+    <li>1. Sprinkle chicken with pepper and salt. Heat a large nonstick skillet over medium-high heat. Add oil to pan; swirl to coat. Add chicken to pan. Cook 2 to 3 minutes on each side or until browned. Transfer chicken to a 4-quart electric slow cooker coated with cooking spray. Stir pineapple juice into drippings, scraping pan to loosen browned bits. Remove from heat; stir in brown sugar and soy sauce. Pour juice mixture over chicken. Cover and cook on LOW for 2 1/2 hours.</li>
+<li>2. Transfer chicken to a serving platter with a slotted spoon. Increase heat to HIGH. Combine 3 tablespoons water and cornstarch in a small bowl; add to sauce in slow cooker, stirring with a whisk. Cook 2 minutes or until sauce thickens, stirring constantly with whisk.</li>
+<li>3. Place rice on each of 6 plates. Top with chicken thighs and sauce. Sprinkle each serving with green onions.</li>
+    </ol>
+
+    <div>
+  Note: <p>MyRecipes is working with <em>Let's Move!</em>, the Partnership for a Healthier America, and USDA's MyPlate to give anyone looking for healthier options access to a trove of recipes that will help them create healthy, tasty plates. For more information about creating a healthy plate, visit <a href="http://www.choosemyplate.gov">www.choosemyplate.gov</a>.</p>
+</div>
+
+
+    <div class="byline">
+  <p class="author">Cooking Light Slow Cooker Tonight, <a href="http://www.oxmoorhouse.com/"><i><b><span itemprop="author">Oxmoor House</span></b></i></a>
+    <br clear="none" />
+        <span itemprop="published">2012</span>
+  </p>
+</div>
+
+
+    
+
+    
+
+    <script type="text/javascript">
+	if (typeof adFactory != 'undefined') {
+		ad = adFactory.getAd(142,70);
+		ad.write();
+	}
+</script>
+</div>
+
+              <div class="relatedList">
+  <h5>Related Recipes</h5>
+  <ul>
+      <li><a href="http://www.myrecipes.com/main-dish-and-entree-recipes/">Main Dishes and Entrées</a></li>
+      <li><a href="http://www.myrecipes.com/dinner-recipes/">Dinner Recipes</a></li>
+      <li><a href="http://www.myrecipes.com/slow-cooker-recipes/">Slow-Cooker Recipes</a></li>
+  </ul>
+</div>
+
+
+               
+
+              <div class="my_notes msgOnly">
+  <h5>My Notes</h5>
+  <p class="dek">Only you will be able to view, print, and edit this note.</p>  
+
+    <a class="add_note">Add Note</a>
+
+    <div id="note_display" class="dek" style="display:none;"></div>
+    <div class="note_box" style="display:none;">
+      <form id="note_form">
+        <textarea id="note_details" name="note[details]"></textarea>
+        <p class="chars_remain"><span class="count">1000</span> characters remaining</p>
+        <div class="errors"></div>
+        <input class="btn save" type="submit" name="save_note" value="" />
+        <a href="#" class="cancel">Cancel</a>
+     </form>
+   </div>
+</div>
+
+
+              <br clear="none" />
+
+             </div> <!-- /div.colB -->
+
+             <div class="outbrainABcol">
+                <div class="OUTBRAIN" data-widget-id="AR_1" data-ob-template="myrecipes"></div>
+             </div> 
+
+
+             <div class="menuReviews">
+  <div class="header">
+    <h3>Ratings and Reviews (<span id="reviewHeaderCount"></span>)</h3>
+
+    <div id="ratingsHistogram"></div>
+    <script type="text/html" id="histogram_tmpl">
+<div class="reviewChart">
+    	<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+		<th scope="row">5 star</th>
+		<td><div class="bar"><div class="inner" style="width:${fiveStarPercentage}px;">${fiveStarPercentage}%</div></div></td>
+		<td>${fiveStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">4 star</th>
+		<td><div class="bar"><div class="inner" style="width:${fourStarPercentage}px;">${fourStarPercentage}%</div></div></td>
+		<td>${fourStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">3 star</th>
+		<td><div class="bar"><div class="inner" style="width:${threeStarPercentage}px;">${threeStarPercentage}%</div></div></td>
+		<td>${threeStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">2 star</th>
+		<td><div class="bar"><div class="inner" style="width:${twoStarPercentage}px;">${twoStarPercentage}%</div></div></td>
+		<td>${twoStarCount}</td>
+		</tr>
+		<tr>
+		<th scope="row">1 star</th>
+		<td><div class="bar"><div class="inner" style="width:${oneStarPercentage}px;">${oneStarPercentage}%</div></div></td>
+		<td>${oneStarCount}</td>
+		</tr>
+		</table>
+		<strong>
+           ${totalCount} {{if pluralize}}
+            Reviews
+            {{else}}
+            Review
+            {{/if}}
+        </strong>
+	</div>
+</script>    
+
+    <div class="reviewInfo">
+        <div class="starRating"></div>
+        <span class="rating1desc"></span>
+        <a href="http://www.myrecipes.com/recipe/sweet-glazed-chicken-thighs-50400000124264/ratings/" class="moreReviews">Read More Reviews</a>
+    </div>
+    <div class="addReview"><a href="#reviewForm" class="btnRed"><span>Add a Review</span></a></div>
+  </div>
+  <ul class="reviews">
+    <li class="review clr">
+  <div class="username">larossdfw</div>
+  <div class="text">
+    <p>So good!  Followed recipe exactly, and it came out delicious.  Super-tender and juicy chicken.</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star4"></div>
+    <span class="ratingDescription starDesc">
+      Worthy of a special occasion
+    </span>
+    <span class="reviewLocation">
+      
+    </span>
+    <span class="postedOn">
+      11/17/13
+    </span>    
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">AnnieJo</div>
+  <div class="text">
+    <p>This was delicious! My kids loved it (and we are not a big crock pot family). The sauce was a bit thin, but tasted great - I&#x27;m not sure I really needed to add the water with the cornstarch or maybe it needed extra cornstarch to thicken. The meat was very tender and flavorful! Super easy - will definitely add this to our weeknight dinner menu.</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star5"></div>
+    <span class="ratingDescription starDesc">
+      Outstanding
+    </span>
+    <span class="reviewLocation">
+      
+    </span>
+    <span class="postedOn">
+      09/24/13
+    </span>    
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">Peggeo</div>
+  <div class="text">
+    <p>This was very good and easy to make.  Served with jasmine rice cooked in microwave.</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star5"></div>
+    <span class="ratingDescription starDesc">
+      Outstanding
+    </span>
+    <span class="reviewLocation">
+      
+    </span>
+    <span class="postedOn">
+      08/11/13
+    </span>    
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">ChezBZ</div>
+  <div class="text">
+    <p>Made this tonight and will put it into regular rotation.  Didn&#x27;t have chicken so used pork chops.  Didn&#x27;t have pineapple juice, used apple. Added a couple of shakes of cayenne pepper for some zip....totally good enough for company!</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star5"></div>
+    <span class="ratingDescription starDesc">
+      Outstanding
+    </span>
+    <span class="reviewLocation">
+      
+    </span>
+    <span class="postedOn">
+      06/26/13
+    </span>    
+  </div>
+</li>
+<li class="review clr">
+  <div class="username">hools78</div>
+  <div class="text">
+    <p>Delicious. I bought three bags of steam fresh chinese veggies, tossed it all (w/ the sauce which I added a little more water making more of it) into a big bowl together. Also the thighs are so tender you can shred it w/ a fork. totally recommend.</p>
+  </div>
+  <div class="info">
+    <div class="starRatingSmall star5"></div>
+    <span class="ratingDescription starDesc">
+      Outstanding
+    </span>
+    <span class="reviewLocation">
+      
+    </span>
+    <span class="postedOn">
+      03/30/13
+    </span>    
+  </div>
+</li>
+
+  </ul>
+</div>
+
+<script type="text/html" id="review_tmpl">
+  {{if mine}}
+    <li class="review clr myReview" id="myReview">
+  {{else}}
+    <li class="review clr">
+  {{/if}}
+       <div class="username">${name}</div>
+       <div class="text">
+       <p>${text}</p>
+
+      {{if mine}}
+        <div class="actions">
+          <a href="#reviewForm" class="edit">Edit</a>
+          <span class="separator">|</span>
+          <a href="#" class="remove">Remove</a>
+        </div>
+      {{/if}}
+    </div>
+    <div class="info">
+        <div class="starRatingSmall star${score}"></div>
+        <span class="ratingDescription starDesc">${score_description}</span>
+        <span class="reviewLocation">${reviewer_location}</span>
+        <span class="postedOn">${postedAt}</span>
+    </div>
+
+    {{if mine}}
+      <div class="myReviewIcon">My Review</div>
+    {{/if}}
+  </li>
+</script>
+
+<div class="menuAddReviewForm" id="reviewForm">
+  <a href="http://www.myrecipes.com/recipe/sweet-glazed-chicken-thighs-50400000124264/ratings/" class="moreReviews">Read More Reviews</a>
+
+  <div class="form">
+  <form id="new_review_form" method="get" action="#"
+        enctype="application/x-www-form-urlencoded">
+    <div class="header clr">
+      <h3 class="form_title">Rate and Review</h3>
+
+      <span class="note">All fields required.</span>
+      <a class="seeTips">See Tips</a>
+
+      <span class="username"></span>
+
+      <div class="helpBalloon">
+        <h3>
+          TIPS<br clear="none">Consider these questions when writing 
+          your review:
+        </h3>
+
+        <ul>
+          <li>How much did you like the dish and would you make it again?</li>
+          <li>Is the recipe appropriate for special occasions or everyday meals?</li>
+          <li>Did you alter ingredients and instructions? If so, how?</li>
+          <li>What did you serve with the dish?</li>
+          <li>Do you have any hints about making this recipe?</li>
+        </ul>
+
+        <div class="pointer"></div>
+      </div>
+    </div>
+
+    <div class="inner">
+      <div class="errors"></div>
+
+      <div class="myRatingContainer clr">
+        <span class="label">My Rating:</span>
+        <div class="starRating"></div>
+        <span class="instructions starDesc">Click to apply your rating</span>
+
+        <div class="locationContainer">
+          <span class="location">Location: <span class="city"></span> <span class="state"></span></span>
+          <input id="showLocation" type="checkbox" name="review[reviewer_location]" checked="checked">
+            Display location
+        </div>
+      </div>
+
+      <div class="alreadyReviewed">
+        <p>You have already rated and reviewed this recipe</p>
+        <a href="#myReview">Go to your review.</a>
+      </div>
+
+      <div class="myReviewContainer clr">
+        <label for="review_body">My Review:</label>
+        <textarea id="review_body" name="review[body]" cols="50" rows="7"></textarea>
+        <span class="charCount">
+          <span class="value">1000</span> characters remaining
+        </span>
+      </div>
+
+      <a class="btnRed post" href="#"><span>Post</span></a>
+
+      <span class="shareFBcheckbox">
+        <input type="checkbox" id="shareFB">
+        Share on Facebook
+      </span>
+    </div>
+  </form>
+</div>
+
+</div>
+
+
+             <div class="recipeGlance">
+  <h5>Sweet Glazed Chicken Thighs Recipe at a Glance</h5>
+  <ul>
+      <li>
+        <strong>COURSE:</strong>
+        <a href="http://www.myrecipes.com/main-dish-and-entree-recipes/"><span itemprop="recipeType">Main Dishes</span></a>
+      </li>
+      <li>
+        <strong>MAIN INGREDIENT:</strong>
+        <a href="http://www.myrecipes.com/chicken-recipes/"><span itemprop="recipeType">Poultry</span></a>
+      </li>
+      <li>
+        <strong>DIETARY CONSIDERATION:</strong>
+        <a href="http://www.myrecipes.com/low-calorie-recipes/"><span itemprop="recipeType">Low Calorie</span></a>, <a href="http://www.myrecipes.com/low-fat-recipes/"><span itemprop="recipeType">Low Fat</span></a>, <a href="http://www.myrecipes.com/low-fat-recipes/"><span itemprop="recipeType">Low Saturated Fat</span></a>, <a href="http://www.myrecipes.com/low-sodium-recipes/"><span itemprop="recipeType">Low Sodium</span></a>, <a href="http://www.myrecipes.com/gluten-free-recipes/"><span itemprop="recipeType">Gluten-Free</span></a>
+      </li>
+      <li>
+        <strong>COOKING METHOD:</strong>
+        <a href="http://www.myrecipes.com/slow-cooker-recipes/"><span itemprop="recipeType">Slow Cook</span></a>
+      </li>
+  <li><strong>PUBLICATION: </strong><a href="http://www.myrecipes.com/oxmoor-house-books-recipes/"><span itemprop="recipeType">Oxmoor House</span></a></li> 
+  </ul>
+</div>
+             
+          </div> <!-- /div.recipeCont -->
+     </div> <!-- /div.colAB -->
+
+     <div class="colC">
+       
+<div class="triple">
+  <h3>More Recipes for Main Dishes</h3>
+  <ul class="clr">
+    <li>
+      <div class="tout">
+        <div class="img">
+          <a href="/recipe/citrus-glazed-chicken-thighs-10000001141963/">
+            <img src="http://img4-3.myrecipes.timeinc.net/i/recipes/ck/06/01/chicken-thigh-ck-1141963-s.jpg"
+                 alt="Citrus-Glazed Chicken Thighs" width="75" height="75">
+          </a>
+        </div>
+        <div class="txt">
+          <h4><a href="/recipe/citrus-glazed-chicken-thighs-10000001141963/" class="x4-editorial-tout-headline-clickable-75x75">Citrus-Glazed Chicken Thighs</a></h4>
+          <div class="attr">
+            Cooking Light
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="tout">
+        <div class="img">
+          <a href="/recipe/marmalade-glazed-turkey-giblet-gravy-10000001675107/">
+            <img src="http://img4-2.myrecipes.timeinc.net/i/recipes/oh/cwsl/marmalade-turkey-oh-s.jpg"
+                 alt="Marmalade-Glazed Turkey and Giblet Gravy" width="75" height="75">
+          </a>
+        </div>
+        <div class="txt">
+          <h4><a href="/recipe/marmalade-glazed-turkey-giblet-gravy-10000001675107/" class="x4-editorial-tout-headline-clickable-75x75">Marmalade-Glazed Turkey and Giblet Gravy</a></h4>
+          <div class="attr">
+            Oxmoor House
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="tout">
+        <div class="img">
+          <a href="/recipe/maple-mustard-glazed-chicken-50400000118599/">
+            <img src="http://img4-1.myrecipes.timeinc.net/i/recipes/ck/12/01/maple-mustard-glazed-chicken-ck-s.jpg"
+                 alt="Maple-Mustard Glazed Chicken" width="75" height="75">
+          </a>
+        </div>
+        <div class="txt">
+          <h4><a href="/recipe/maple-mustard-glazed-chicken-50400000118599/" class="x4-editorial-tout-headline-clickable-75x75">Maple-Mustard Glazed Chicken</a></h4>
+          <div class="attr">
+            Cooking Light
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="adRt">
+<span class="adtext"><span>advertisement</span></span>
+<script type="text/javascript">
+	var sizes = new Array("300x250", "300x600", "300x1050");
+	var adMulti300 = adFactory.getMultiAd(sizes);
+	var yieldbotParams = 'n';
+	try {yieldbotParams = yieldbot.adAvailable('300x250-position-1');} catch (e) {}
+	adMulti300.setParam('ybot_ad', yieldbotParams);
+	adMulti300.setParam('ybot_slot', '300x250-position-1');
+	adMulti300.write();
+</script>
+</div>
+
+<div id="ingredient-search-widget">
+    <div class="ad-header">
+	<div>
+		<script type="text/javascript">
+			if (typeof adFactory != 'undefined') {
+				var ad = adFactory.getAd(100,75);
+				ad.write();
+			}
+		</script>
+	</div>
+</div>
+    <form id="ingredient-search-form" method="get" action="http://search.myrecipes.com/ingredient-chef.html">
+        <ol>
+            <li>
+                <input type="text" name="ingredient-widget-00" id="ingredient-widget-00"></input>
+            </li>
+            <li class="plus"></li>
+            <li>
+                <input type="text" name="ingredient-widget-01" id="ingredient-widget-01"></input>
+            </li>
+            <li class="plus"></li>
+            <li>
+                <input type="text" name="ingredient-widget-02" id="ingredient-widget-02"></input>
+            </li>
+            <li class="button-bar">
+               <input type="submit" value="Get Recipes!" class="get-recipes-submit" />
+            </li>
+            <li class="error-message">
+                <p>Enter at least one ingredient</p>
+            </li>
+        </ol>
+    </form>
+</div>
+<script type="text/javascript">
+	jQuery(function($) {
+	    $('#ingredient-search-widget').mr_core('ingredient_search_init', 
+	    		'ingredient-widget-0', 
+	    		['e.g. fish, chicken', 'e.g. rice, pasta', 'e.g. basil, cheese' ],
+	    		function() {omniCommunityTracker('ic-search-module-button');});
+	});
+</script>
+
+<!-- http://www.myrecipes.com/static/newsletters/chicken-tonight-recipe-rightrail.txt -->
+  <div class="newsSignupRR clr">
+     <div class="txt">
+	<h3>You want chicken? We've got it!</h3>
+	<div class="img">
+		<img src="http://img4.myrecipes.com/static/i/nl-chicken-small.jpg" alt="Chicken Tonight" width="75" height="75" />
+	</div>
+	<div class="dek">Get endless recipe ideas for this dinnertime staple, emailed weekly.</div>
+	<form enctype="application/x-www-form-urlencoded" onsubmit="omniNewsTracker(this.sub.value);" method="post" action="http://ebm.cheetahmail.com/r/regf2">
+	   <div>
+          	<input type="hidden" name="aid" value="1078531716" />
+		<input type="hidden" name="n" value="20" />
+		<input type="hidden" name="sub" value="2068231353" />
+		<input type="hidden" name="re" value="http://www.myrecipes.com/static/shells/cheetahmail/newsletter-thankyou-pop.html" />
+		<input type="hidden" name="MYRECIPES_SOURCE" value="recipe_rightrail" />
+		<input type="text" id="email" name="email" class="textboxDefault" value="Your E-mail Address" />
+		<input type="image" src="http://img4.myrecipes.com/static/i/btn-submitSmall.png" />
+	   </div>
+	</form>
+	<div class="info"><a href="http://www.myrecipes.com/newsletter/">See More Newsletters</a> | <a href="http://f.chtah.com/i/1/1078531716/ChickenTonight.html" class="popupNL">View Sample</a></div>
+	<div class="privacy"><img src="http://img4-1.myrecipes.timeinc.net/static/i/icon-privacy.png" width="16" height="16" alt="" /> We Respect Your Privacy. <a href="http://cgi.timeinc.net/cgi-bin/mail/dnp/privacy_centralized.cgi/myrecipes?d_source=E">Privacy Policy</a></div>
+     </div>
+  </div>
+  <script type="text/javascript">var omni_newstout_id = 'MR Chicken';</script>
+
+<div class="outbrainCcol">
+   <div class="OUTBRAIN" data-widget-id="AR_6" data-ob-template="myrecipes"></div>
+</div>
+
+	
+<div class="adRt">
+	<script type="text/javascript">
+	if (typeof adFactory != 'undefined') {			
+		var adCm = adFactory.getCmAd(300, 300,"recipes","ofie");			
+		adCm.write();
+	}
+	</script>
+</div>
+
+<div class="quigo">
+	<script type="text/javascript">
+		google_ad_client = "ca-timeinc-myrecipes-bah";
+		google_ad_channel = "other";
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</div>
+  
+     </div>
+     <!-- /div.colC -->
+
+
+  <script type="text/javascript" id="recipe_json">
+   var this_recipe = {"recipe":{"cook_times":[],"created_at":"2012-10-11T11:25:30-04:00","deleted_at":0,"description":"<p>This simple chicken dish becomes a whole lot more savory when stuck in a slow cooker. The sweet juice mixture gives the chicken its undeniably delicious flavor. Serve over hot cooked rice.</p>","edit_created":true,"flag_count":null,"id":208981,"ingredients":[{"name":"skinless, boneless chicken thighs","position":1,"amount":"2","units":"pounds","preparation":"","is_label":false,"grocery_aisle":"meat","validation_context":null,"errors":{}},{"name":"freshly ground black pepper","position":2,"amount":"1/2","units":"teaspoon","preparation":"","is_label":false,"grocery_aisle":"spices","validation_context":null,"errors":{}},{"name":"salt","position":3,"amount":"1/4","units":"teaspoon","preparation":"","is_label":false,"grocery_aisle":"spices","validation_context":null,"errors":{}},{"name":"olive oil","position":4,"amount":"1","units":"teaspoon","preparation":"","is_label":false,"grocery_aisle":"spices","validation_context":null,"errors":{}},{"name":"Cooking spray","position":5,"amount":"","units":"","preparation":"","is_label":false,"grocery_aisle":"spices","validation_context":null,"errors":{}},{"name":"pineapple juice","position":6,"amount":"1","units":"cup","preparation":"","is_label":false,"grocery_aisle":"other","validation_context":null,"errors":{}},{"name":"light brown sugar","position":7,"amount":"2","units":"tablespoons","preparation":"","is_label":false,"grocery_aisle":"baking","validation_context":null,"errors":{}},{"name":"lower-sodium soy sauce","position":8,"amount":"2","units":"tablespoons","preparation":"","is_label":false,"grocery_aisle":"special","validation_context":null,"errors":{}},{"name":"water","position":9,"amount":"3","units":"tablespoons","preparation":"","is_label":false,"grocery_aisle":"other","validation_context":null,"errors":{}},{"name":"cornstarch","position":10,"amount":"2","units":"tablespoons","preparation":"","is_label":false,"grocery_aisle":"baking","validation_context":null,"errors":{}},{"name":"hot cooked rice","position":11,"amount":"3","units":"cups","preparation":"","is_label":false,"grocery_aisle":"canned","validation_context":null,"errors":{}},{"name":"sliced green onions","position":12,"amount":"3","units":"tablespoons","preparation":"","is_label":false,"grocery_aisle":"produce","validation_context":null,"errors":{}}],"is_public":true,"legacy_id":null,"main_image_id":null,"name":"Sweet Glazed Chicken Thighs","preparation":"<p>1. Sprinkle chicken with pepper and salt. Heat a large nonstick skillet over medium-high heat. Add oil to pan; swirl to coat. Add chicken to pan. Cook 2 to 3 minutes on each side or until browned. Transfer chicken to a 4-quart electric slow cooker coated with cooking spray. Stir pineapple juice into drippings, scraping pan to loosen browned bits. Remove from heat; stir in brown sugar and soy sauce. Pour juice mixture over chicken. Cover and cook on LOW for 2 1/2 hours.</p><p>2. Transfer chicken to a serving platter with a slotted spoon. Increase heat to HIGH. Combine 3 tablespoons water and cornstarch in a small bowl; add to sauce in slow cooker, stirring with a whisk. Cook 2 minutes or until sauce thickens, stirring constantly with whisk.</p><p>3. Place rice on each of 6 plates. Top with chicken thighs and sauce. Sprinkle each serving with green onions.</p>","profile_id":null,"ratings_count":11,"related_recipe_collections":[{"name":"Main Dishes and Entr\u00e9es","link_url":"http://www.myrecipes.com/main-dish-and-entree-recipes/","image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/rs/2006/chicken-dumplings-rs-1141202-s.jpg"},{"name":"Dinner Recipes","link_url":"http://www.myrecipes.com/dinner-recipes/","image_url":"http://img4-1.myrecipes.timeinc.net/i/recipes/ck/09/11/scallop-piccata-ck-1932630-s.jpg"},{"name":"Slow-Cooker Recipes","link_url":"http://www.myrecipes.com/slow-cooker-recipes/","image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/09/01/smoky-chili-ck-1867598-s.jpg"}],"serving_size":null,"servings":null,"short_url":"http://bit.ly/TjarIh","sortable_name":"sweet glazed chicken thighs","text_ingredients":null,"total_ratings_score":47,"updated_at":"2013-09-26T19:53:24-04:00","user_photo_content_type":null,"user_photo_created_at":null,"user_photo_file_name":null,"user_photo_file_size":null,"user_photo_updated_at":null,"ratings_summary_with_counts":{"5":6,"4":2,"3":3,"1":0,"2":0},"average_rating":4.2727272727272725,"permalink":"sweet-glazed-chicken-thighs-50400000124264","courses":[{"tag":{"context_type":"course","created_at":"2011-04-01T15:30:49-04:00","id":10194,"name":"Main Dishes","rc_tag_id":"10321.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/main-dish-and-entree-recipes/"}}],"main_ingredients":[{"tag":{"context_type":"main_ingredient","created_at":"2011-04-01T15:30:49-04:00","id":10217,"name":"Poultry","rc_tag_id":"10344.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/chicken-recipes/"}}],"cuisines":[],"occasions":[],"conveniences":[],"cooking_methods":[{"tag":{"context_type":"cooking_method","created_at":"2011-04-01T15:30:50-04:00","id":10281,"name":"Slow Cook","rc_tag_id":"10408.0","updated_at":"2012-06-26T10:44:43-04:00","url":"http://www.myrecipes.com/slow-cooker-recipes/"}}],"owner_name":null,"thumbnail_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-l.jpg","user_search_url":null,"default_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-l.jpg","expanded_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-x.jpg","recipe_meta_data":{"ad_publication":"Oxmoor House","ad_cookbook":null,"ad_course":"Main Dishes","ad_cuisine":"","ad_mainIng":"Poultry","excludeIng":"Dairy,Eggs,Nuts,Fish,Shellfish,Alcohol","ad_specialIng":"","ad_diet":"Low Calorie,Low Fat,Low Saturated Fat,Low Sodium,Gluten-Free","ad_prep":"Slow Cook","ad_convenience":"","ad_season":"","ad_franchise":null,"ad_key_value_pairs":null,"cook_time":"","costperserving":null},"main_image_data":{"title":"Sweet Glazed Chicken Thighs","caption":"Oxmoor House","source":"Oxmoor House","flag_count":null,"profile_id":null,"imageable_id":208981,"imageable_type":"Recipe","tips_id":"00420000014625","small_image_url":"http://img4-1.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-s.jpg","medium_image_url":"http://img4-1.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-m.jpg","large_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-l.jpg","extra_large_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-x.jpg","user_photo_file_name":null,"user_photo_content_type":null,"user_photo_file_size":null,"created_at":"2013-06-03T17:53:46-04:00","updated_at":"2013-09-26T19:53:24-04:00","source_logo_url":"http://img4.myrecipes.com/static/i/from_oxmoorhouse.png","source_link_url":"http://www.oxmoorhouse.com/","is_primary":true},"editorial_recipe_data":{"ad_key_value_pairs":null,"author":null,"bitly_url":null,"chef":null,"cookbook":null,"cookbook_credit":"Cooking Light Slow Cooker Tonight","cost_per_serving":null,"extra_large_image_caption":null,"extra_large_image_photo_credit":"Oxmoor House","extra_large_image_title":"Sweet Glazed Chicken Thighs","extra_large_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-x.jpg","franchise":null,"id":76731,"internal_publication_url":"http://www.myrecipes.com/oxmoor-house-books-recipes/","kitchen_test_notes":"<p>MyRecipes is working with <em>Let's Move!</em>, the Partnership for a Healthier America, and USDA's MyPlate to give anyone looking for healthier options access to a trove of recipes that will help them create healthy, tasty plates. For more information about creating a healthy plate, visit <a href=\"http://www.choosemyplate.gov\">www.choosemyplate.gov</a>.</p>","large_image_caption":null,"large_image_photo_credit":"Oxmoor House","large_image_title":"Sweet Glazed Chicken Thighs","large_image_url":"http://img4-3.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-l.jpg","last_modified_at":"2012-10-11T11:23:15-04:00","medium_image_caption":null,"medium_image_photo_credit":"Oxmoor House","medium_image_title":"Sweet Glazed Chicken Thighs","medium_image_url":"http://img4-1.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-m.jpg","menu_image_url":null,"menu_tips_id":null,"menu_title":null,"nutritional_info":[{"type":"calories","unit":"","amount":"339"},{"type":"caloriesfromfat","unit":"%","amount":"0.0"},{"type":"fat","unit":"g","amount":"7.1"},{"type":"satfat","unit":"g","amount":"1.7"},{"type":"monofat","unit":"g","amount":"2.5"},{"type":"polyfat","unit":"g","amount":"1.6"},{"type":"protein","unit":"g","amount":"32.4"},{"type":"carbohydrate","unit":"g","amount":"33.7"},{"type":"fiber","unit":"g","amount":"0.6"},{"type":"cholesterol","unit":"mg","amount":"125"},{"type":"iron","unit":"mg","amount":"2.8"},{"type":"sodium","unit":"mg","amount":"363"},{"type":"calcium","unit":"mg","amount":"35"}],"omit_from_search":false,"publication":"Oxmoor House","publication_date":"2012-09-01T00:00:00-04:00","publication_is_partner":false,"publication_link_url":"http://www.oxmoorhouse.com/","publication_logo_url":"http://img4.myrecipes.com/static/i/from_oxmoorhouse.png","recipe_id":208981,"rendered_at":"2013-09-26T19:23:41-04:00","restaurant":null,"seo_description":"This simple chicken dish becomes a whole lot more savory when stuck in a slow cooker. The sweet juice mixture gives the chicken its undeniably delicious flavor. Serve over hot cooked rice.","seo_keywords":null,"seo_title":"Sweet Glazed Chicken Thighs Recipe","servings_yield":"6 servings (serving size: 1/2 cup rice, 1 chicken thigh, about 1/3 cup sauce, and 1 1/2 teaspoons green onions)","slideshow_image_url":"http://img4-2.myrecipes.timeinc.net/i/recipes/ck/10/01/roast-chicken-balsamic-ck-s.jpg","slideshow_title":"Easy Weeknight Chicken Menus","slideshow_url":"http://www.myrecipes.com/quick-and-easy/easy-chicken-menus-00420000005523/","small_image_caption":null,"small_image_photo_credit":"Oxmoor House","small_image_title":"Sweet Glazed Chicken Thighs","small_image_url":"http://img4-1.myrecipes.timeinc.net/i/recipes/oh/12/oh-sweet-glazed-chicken-thighs-s.jpg","tips_id":"50400000124264","tips_seo_slug":"sweet-glazed-chicken-thighs","tkg":false,"updated_at":"2013-09-26T19:53:24-04:00","video_image_url":null,"video_link":null,"video_title":null}}}.recipe;
+</script>
+
+
+  </div>
+
+  		</div>
+	</div>
+	<!-- SSi Include  /static/inc/footer.html -->
+<!-- SSi Include  /static/inc/footer-no-ad.html -->
+<div class="footer">
+	<div class="navRepeat clr">
+		<ul>
+			<li><a href="http://www.myrecipes.com/recipe-finder/"><span>Recipes</span></a></li>
+			<li><a href="http://www.myrecipes.com/r/my_recipe_file/"><span>My Recipe File</span></a></li>
+			<li><a href="http://www.myrecipes.com/quick-and-easy/"><span>Quick &amp; Easy</span></a></li>
+			<li><a href="http://www.myrecipes.com/menus/"><span>Menus</span></a></li>
+			<li><a href="http://www.myrecipes.com/healthy-diet/"><span>Healthy</span></a></li>
+			<li><a href="http://www.myrecipes.com/how-to/video/cooking-videos-00420000005876/"><span>How-To Video</span></a></li>
+			<li><a href="http://www.myrecipes.com/kids/"><span>Kids</span></a></li>
+      <li class="rotating-channel"><a href="http://www.myrecipes.com/holidays/cookies/"><span>Cookies</span></a></li>
+      <li class="rotating-channel"><a href="http://www.myrecipes.com/holidays/"><span>Holidays</span></a></li>
+		</ul>
+	</div>
+	<div class="wrap2">
+		<div class="ftLogo">
+			<a href="http://www.myrecipes.com/"><img src="http://img4.myrecipes.com/static/i/logo_myrecipes_header.gif" alt="My Recipes" /></a>
+		</div>
+		<div class="ftConnect">
+			<h5>Stay connected with MyRecipes</h5>
+			<ul class="social">
+				<li><a class="facebook" href="https://www.facebook.com/myrecipes" target="_blank">Facebook</a></li>
+				<li><a class="twitter" href="https://twitter.com/my_recipes/" target="_blank">Twitter</a></li>
+				<li><a class="google" href="https://plus.google.com/114484026750431741179/posts" rel="publisher" target="_blank">Google+</a></li>
+				<li><a class="pinterest" href="http://www.pinterest.com/myrecipes/" target="_blank">Pinterest</a></li>
+			</ul>
+			<a class="mobile" href="http://www.myrecipes.com/m/">Mobile</a>
+			<a class="newsletter" href="http://www.myrecipes.com/newsletter/">Sign up for Newsletters</a>
+			<div class="addTo">
+				<div class="getRSSList">
+					<div class="label">Add MyRecipes to:</div>
+					<a href="http://add.my.yahoo.com/content?.intl=us&amp;url=http://rss.myrecipes.com/web/recipes/rss/editors-picks/index.xml" rel="nofollow" target="_blank">My Yahoo!</a>
+					<a href="http://www.google.com/ig/add?feedurl=http://rss.myrecipes.com/web/recipes/rss/editors-picks/index.xml" rel="nofollow" target="_blank">My Google</a>
+					<a href="http://my.msn.com/addtomymsn.armx?m=1&amp;ru=http%3A%2F%2Frss%2Emyrecipes%2Ecom%2Fweb%2Frecipes%2Frss%2Feditors%2Dpicks%2Findex%2Exml&amp;id=rss&amp;ut=http%3A%2F%2Frss%2Emyrecipes%2Ecom%2Fweb%2Frecipes%2Frss%2Feditors%2Dpicks%2Findex%2Exml" rel="nofollow" target="_blank">My MSN</a>
+					<a href="http://www.netvibes.com/subscribe.php?url=http://rss.myrecipes.com/web/recipes/rss/editors-picks/index.xml" rel="nofollow" target="_blank">My Netvibes</a>
+				</div>
+			</div>
+			<a class="subscribe" href="https://subscription.timeinc.com/storefront/link/1004465.html">Subscribe to Our Magazines</a>
+			<a class="give" href="https://subscription.cookinglight.com/storefront/subscribe-to-cooking-light/site/ck-gift0110.html?xid=myrdonor_ck&amp;link=1003789" target="_blank">Give a Gift</a>
+		</div>
+		<script type="text/javascript">addTo();</script>
+		<div class="ftLinks">
+			<a href="http://www.myrecipes.com/about-us/">About</a> |
+			<a href="http://www.myrecipes.com/advertising/">Advertising</a> |
+			<a href="http://www.timeinc.com/careers/" target="_blank">Careers</a> |
+			<a href="http://www.myrecipes.com/contact-us/">Contact</a> |
+			<a href="http://www.myrecipes.com/frequently-asked-questions/">FAQ</a> |
+			<a href="http://www.myrecipes.com/press/">Press</a> |
+			<a href="http://www.myrecipes.com/rss/">RSS</a> |
+			<a href="http://www.myrecipes.com/static/sitemap/">Site Map</a> |
+			<a href="http://www.myrecipes.com/contests-and-sweepstakes/recipe-contests-sweepstakes-00420000000466/">Sweepstakes &#38; Contests</a>
+		</div>
+	</div><!-- /div.wrap2 -->
+</div><!-- /div.footer -->
+<!-- SSi Include  /static/inc/footer-js.html -->
+<script type="text/javascript" src="http://js.revsci.net/gateway/gw.js?csid=H07710"></script>
+<script type="text/javascript">TiiAdTrackRevSci();</script>
+<!-- Quantcast Tag START -->
+<script type='text/javascript' src='http://edge.quantserve.com/quant.js'></script>
+<script type='text/javascript'>
+	_qacct='p-5dyPa639IrgIw';
+	quantserve();
+</script>
+<noscript>
+	<a href='http://www.quantcast.com/p-5dyPa639IrgIw' target='_blank'>
+		<img src='http://pixel.quantserve.com/pixel/p-5dyPa639IrgIw.gif' alt='' style='display: none;' border='0' height='1' width='1' />
+	</a>
+</noscript>
+<!-- Quantcast Tag END -->
+<div class="copyright">
+   <div class="wrap2">
+      			
+			
+			Copyright © 2013 Time Inc. Lifestyle Group. All Rights Reserved. Use of this site constitutes acceptance of our <a href="http://cgi.timeinc.net/cgi-bin/mail/dnp/terms_of_service.cgi/myrecipes"
+   target="_blank">Terms of Use</a> and 
+<a href="https://subscription.timeinc.com/storefront/privacy/myrecipes/generic_privacy_new.html?dnp-source=E"
+   target="_blank">Privacy Policy</a>
+<a href="https://subscription.timeinc.com/storefront/privacy/myrecipes/generic_privacy_new.html?dnp-source=E#california"
+   target="_blank">(Your California Privacy Rights)</a>. 
+<a class="adchoice"
+   href="http://subscription-assets.timeinc.com/prod/assets/themes/magazines/default/template-resources/html/legal/ti-corp-behavioral.html"
+   target="_blank">Ad Choices</a>
+   </div>
+</div>
+
+<script type="text/javascript" src="http://img4.myrecipes.com/static/j/jumptime.js?buildlife=62373"></script>
+<div class="wrap2">
+	<div class="adTop">
+	<script type="text/javascript">
+		if (typeof adFactory != 'undefined') {
+			var ad = adFactory.getAd(728,90);
+			ad.setPosition(1);				
+			var yieldbotParams = 'n';
+			try {yieldbotParams = yieldbot.adAvailable('728x90-position-1');} catch (e) {}
+			ad.setParam('ybot_ad', yieldbotParams);
+			ad.setParam('ybot_slot', '728x90-position-1');
+			ad.write();
+		}
+	</script>
+</div>
+</div>
+
+</div>
+  <script src="http://img4.myrecipes.com/static/j/recipe.js?buildlife=62373" type="text/javascript"></script>
+  <!-- SSi Include  /static/inc/third-party/outbrain-js.html -->
+<script type="text/javascript" src="http://widgets.outbrain.com/outbrain.js"></script>
+</body>
+</html>
