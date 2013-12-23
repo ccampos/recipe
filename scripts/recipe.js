@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    var time1, time2, result;
-
     parseIngredients = function() {
         var ingredientsUI = $("li[itemprop='ingredient']"),
             ingredientsCount = ingredientsUI.length,
@@ -61,5 +59,6 @@ $(document).ready(function() {
         return trimArrItems(preparationSteps);
     };
 
+    console.log(parseIngredients());
     console.log(parsePreparation());
 });
