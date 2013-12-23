@@ -43,9 +43,23 @@ $(document).ready(function() {
             if (lastSubstep === "") {
                 subArr.pop();
             }
-            console.log(subArr);
+
+            preparationSteps = preparationSteps.concat(subArr);
         }
+        
+        trimArrItems = function(array) {
+            var i = 0,
+                length = array.length;
+
+            for (; i < length; i += 1) {
+                array[i] = array[i].trim();
+            }
+
+            return array;
+        };
+
+        return trimArrItems(preparationSteps);
     };
 
-    parsePreparation();
+    console.log(parsePreparation());
 });
