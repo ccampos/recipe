@@ -59,6 +59,6 @@ $(document).ready(function() {
         return trimArrItems(preparationSteps);
     };
 
-    console.log(parseIngredients());
-    console.log(parsePreparation());
+    console.log(JSON.stringify(parseIngredients()));
+    console.log(JSON.stringify(parsePreparation()));
 });
