@@ -9,4 +9,4 @@ recipes.
 
 Trying to figure out how to display ingredients and steps.
 
-Is the best way to display ingredients dynamically, how to format them for iphone by aisle order?
+Format ingredients by aisle by default?
