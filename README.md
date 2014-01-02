@@ -9,4 +9,6 @@ recipes.
 
 Trying to figure out how to display ingredients and steps.
 
-Format ingredients by aisle by default?
+Apparently preparation list is working fine the way it is.
+
+Ingredient list may need to be sorte by aisle, or maybe not.
